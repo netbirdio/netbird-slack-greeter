@@ -1,6 +1,6 @@
 # NetBird Slack Greeter
 
-This Go-based application, residing in the `bot` folder, is designed to integrate with Slack for the NetBird community. It handles events from Slack's Socket Mode, offering automated responses and channel management.
+This Go-based application, residing in the `bot` folder, is designed to integrate with Slack for the NetBird community. It handles events from Slack's Socket Mode, offering automated responses to events of users joining the workspace or joining selected channels.
 
 ## Features
 
@@ -33,14 +33,15 @@ This Go-based application, residing in the `bot` folder, is designed to integrat
 
 ## Usage
 
-1. Set the environment variables `SLACK_APP_TOKEN` and `SLACK_BOT_TOKEN`.
-2. Update your constants and channel IDs in `bot/main.go`.
-3. Build the project:
+1. Create a Slack app and install it to your workspace. Follow this [guide](https://api.slack.com/start/quickstart). You can use the manifest file from [manifest.yml](/manifest.yml).
+2. Set the environment variables `SLACK_APP_TOKEN` and `SLACK_BOT_TOKEN`.
+3. Update your constants and channel IDs in `bot/main.go`.
+4. Build the project:
    ```bash
    cd bot
    go build -o netbird-slack-greeter
    ```
-4. Execute the application:
+5. Execute the application:
    ```bash
    ./bot/netbird-slack-greeter
    ```
@@ -68,7 +69,19 @@ Contributions are encouraged! For feature requests or bug reports, please file a
 
 ## License
 
-[Specify License Here]
+BSD 3-Clause License
+
+Copyright (c) 2022 Wiretrustee UG (haftungsbeschränkt) & AUTHORS
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## Support
 
